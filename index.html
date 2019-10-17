@@ -68,6 +68,7 @@
       );
     </script>
     <a-scene background="color: #FAFAFA">
+      <!-- loading assets -->
       <a-assets>
         <img id="bedroom" src="static_assets\QueensBedroom1.jpg"/>
         <img id="cellar" src="static_assets\cellar.jpg"/>
@@ -77,7 +78,9 @@
         <img id="queens-entryway" src="static_assets\QueensEntryRoom.jpg"/>
         <img id="door" src="static_assets\door.png"/>
       </a-assets>
+      <!-- initial starting room -->
       <a-sky id="skybox" src="#bedroom"></a-sky>
+      <!-- creating target reticle -->
       <a-entity id="cam" camera position="0 1.6 0" look-controls>
         <a-entity cursor="fuse:true;fuseTimeout:2000"
                   geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
@@ -88,13 +91,17 @@
       </a-entity>
       <!-- show icons in each photo -->
       <a-entity id="spots" hotspots>
+        <!-- spot group for Queen's bedroom - show these images when user is in Queen's Bedroom -->
         <a-entity id="group-bedroom">
+          <!-- link icons to other rooms-->
           <a-image spot="linkto:#bathroom;spotgroup:group-bathroom" position="1 1 10"></a-image>
           <a-image spot="linkto:#queens-entryway;spotgroup:group-entryway" position="9 1 7"></a-image>
           <a-image src="static_assets\info.png" position="-10 4 4" look-at="#cam"></a-image>
           <a-image src="static_assets\info.png" position="-3 2 7" look-at="#cam"></a-image>
         </a-entity>
+        <!-- spot group for cellar - show these images when user is in the cellar -->
         <a-entity id="group-cellar" scale="0 0 0">
+          <!-- link icons to other rooms-->
           <a-image spot="linkto:#hallway-cellar;spotgroup:group-hallway-cellar" position="-5 1 -8"></a-image>
           <a-image src="static_assets\info.png" position="10 0 0" look-at="#cam"></a-image>
           <a-image src="static_assets\info.png" position="-3 1 4" look-at="#cam"></a-image>
