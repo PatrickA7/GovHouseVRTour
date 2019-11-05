@@ -6,7 +6,7 @@ This application requires Node.js to run. Follow [this link to install Node.js,]
 
 (TODO: add images)
 1. Click the green "Clone or download" button, then choose to download as a ZIP.
-![Step 1](https://github.com/PatrickA7/GovHouseVRTour/tree/master/README_images/step1.png)
+![Step 1](https://github.com/PatrickA7/GovHouseVRTour/blob/master/README_images/step1.PNG)
 
 2. Extract the ZIP file to a folder of your choice
 
