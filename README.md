@@ -6,6 +6,7 @@ This application requires Node.js to run. Follow [this link to install Node.js,]
 
 (TODO: add images)
 1. Click the green "Clone or download" button, then choose to download as a ZIP.
+![Step 1](/README_images/step1.png)
 
 2. Extract the ZIP file to a folder of your choice
 
