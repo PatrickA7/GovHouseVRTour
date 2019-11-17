@@ -9,6 +9,7 @@
 <!--animation component script-->
 <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
 <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+<script src="panels.js"></script>
 <script>
   AFRAME.registerComponent('hotspots',{
     init:function(){
@@ -77,6 +78,7 @@
         <img id="hallway-cellar" src="static_assets\InFrontOfCellar.jpg"/>
         <img id="queens-entryway" src="static_assets\QueensEntryRoom.jpg"/>
         <img id="door" src="static_assets\door.png"/>
+        <img id="info-icon" src="static_assets\info.png"/>
       </a-assets>
       <!-- initial starting room -->
       <a-sky id="skybox" src="#bedroom"></a-sky>
@@ -98,6 +100,8 @@
           <a-image spot="linkto:#queens-entryway;spotgroup:group-entryway" position="9 1 7"></a-image>
           <a-image src="static_assets\info.png" position="-10 4 4" look-at="#cam"></a-image>
           <a-image src="static_assets\info.png" position="-3 2 7" look-at="#cam"></a-image>
+          <a-image id="carpet" cursor-listener src="static_assets\info.png" position="5 -1 0" look-at="#cam"></a-image>
+          <a-image id="carpet-info" src="static_assets\kashan-rug.png" position="5 -1 0" look-at="#cam" scale="4 2 2" visible="false"></a-image>
         </a-entity>
         <!-- spot group for cellar - show these images when user is in the cellar -->
         <a-entity id="group-cellar" scale="0 0 0">
@@ -119,5 +123,8 @@
         </a-entity>
       </a-entity>
     </a-scene>
+    <script>
+
+      </script>
   </body>
 </html>
