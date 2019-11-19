@@ -100,26 +100,31 @@
           <a-image spot="linkto:#queens-entryway;spotgroup:group-entryway" position="9 1 7"></a-image>
           <a-image src="static_assets\info.png" position="-10 4 4" look-at="#cam"></a-image>
           <a-image src="static_assets\info.png" position="-3 2 7" look-at="#cam"></a-image>
-          <a-image id="carpet" cursor-listener src="static_assets\info.png" position="5 -1 0" look-at="#cam"></a-image>
-          <a-image id="carpet-info" src="static_assets\kashan-rug.png" position="5 -1 0" look-at="#cam" scale="4 2 2" visible="false"></a-image>
+          <a-image id="carpet" cursor-listener src="static_assets\info.png" position="5 -1 0" look-at="#cam" visible="false"></a-image>
+          <a-image id="carpet-info" src="static_assets\kashan-rug.png" position="5 -1 0" look-at="#cam" scale="4 2 2" visible="true"></a-image>
         </a-entity>
         <!-- spot group for cellar - show these images when user is in the cellar -->
         <a-entity id="group-cellar" scale="0 0 0">
           <!-- link icons to other rooms-->
           <a-image spot="linkto:#hallway-cellar;spotgroup:group-hallway-cellar" position="-5 1 -8"></a-image>
-          <a-image src="static_assets\info.png" position="10 0 0" look-at="#cam"></a-image>
+          <a-image src="static_assets\info.png" position="10 0 0" look-at="#cam" visible="false"></a-image>
           <a-image src="static_assets\info.png" position="-3 1 4" look-at="#cam"></a-image>
           <a-image src="static_assets\info.png" position="5 2 -4" look-at="#cam"></a-image>
+          <a-image id="cellar-info" src="static_assets\cellar-info.png" position="3 0 0" look-at="#cam" scale="4 2 1" visible="true"></a-image>
         </a-entity>
         <a-entity id="group-bathroom" scale="0 0 0">
           <a-image spot="linkto:#bedroom;spotgroup:group-bedroom" position="10 0 -8"></a-image>
         </a-entity>
         <a-entity id="group-entryway" scale="0 0 0">
           <a-image spot="linkto:#hallway-cellar;spotgroup:group-hallway-cellar" position="0 1 -8"></a-image>
-          <a-image src="static_assets\info.png" position="-7 2 7" look-at="#cam"></a-image>
+          <a-image spot="linkto:#bedroom;spotgroup:group-bedroom" position="0 1 5"></a-image>
+          <a-image src="static_assets\info.png" position="-7 2 7" look-at="#cam" visible="false"></a-image>
+          <a-image id="abbot-info" src="static_assets\abbot-portraits.png" position="-3 0 3" look-at="#cam" scale="4 2 2" visible="true"></a-image>
         </a-entity>
         <a-entity id="group-hallway-cellar" scale="0 0 0">
           <a-image spot="linkto:#cellar;spotgroup:group-cellar" position="0 0 2"></a-image>
+          <a-image spot="linkto:#queens-entryway;spotgroup:group-entryway" position="-5 1 5"></a-image>
+          <a-image id="aus-flag-info" src="static_assets\australian-flag.png" position="-4 1 1" look-at="#cam" scale="3 2 1" visible="true"></a-image>
         </a-entity>
       </a-entity>
     </a-scene>
